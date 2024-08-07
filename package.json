@@ -1,0 +1,29 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "API Node com framework Express",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": " node --watch src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ielmoreno/API-BKE-EXPRESS.git"
+  },
+  "keywords": [
+    "API",
+    "NODE",
+    "EXPRESS",
+    "ZOD"
+  ],
+  "author": "Gabriel Moreno Medeiros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ielmoreno/API-BKE-EXPRESS/issues"
+  },
+  "homepage": "https://github.com/ielmoreno/API-BKE-EXPRESS#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
