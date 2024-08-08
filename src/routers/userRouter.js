@@ -1,0 +1,19 @@
+import express from "express"
+import userList from '../controllers/users/userList.js'
+import userById from '../controllers/users/userById.js'
+import createUser from "../controllers/users/createUser.js"
+import editUser from "../controllers/users/editUser.js"
+import editNameUser from "../controllers/users/editNameUser.js"
+import deleteUser from "../controllers/users/deleteUser.js"
+
+
+const router = express.Router()
+
+router.get("/list", userList)
+router.get('/', userById)
+router.post('/', createUser)
+router.put('/', editUser)
+router.patch('/', editNameUser)
+router.delete('/', deleteUser)
+
+export default router
