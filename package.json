@@ -1,29 +1,29 @@
 {
-  "name": "api-bke-express",
+  "name": "api-bke-express-2sem2024",
   "version": "1.0.0",
-  "description": "API Node com framework Express",
+  "description": "API Node com Express para o Backend do 2 Semestre de 2024 (3 Modulo) IFSP",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "node src/server.js",
-    "dev": " node --watch src/server.js"
+    "dev": "node --env-file=.env --watch src/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ielmoreno/API-BKE-EXPRESS.git"
+    "url": "git+https://github.com/renancavichi/api-bke-express-2sem2024.git"
   },
   "keywords": [
-    "API",
-    "NODE",
-    "EXPRESS",
-    "ZOD"
+    "api",
+    "express",
+    "zod",
+    "mvc"
   ],
-  "author": "Gabriel Moreno Medeiros",
+  "author": "Renan Cavichi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ielmoreno/API-BKE-EXPRESS/issues"
+    "url": "https://github.com/renancavichi/api-bke-express-2sem2024/issues"
   },
-  "homepage": "https://github.com/ielmoreno/API-BKE-EXPRESS#readme",
+  "homepage": "https://github.com/renancavichi/api-bke-express-2sem2024#readme",
   "dependencies": {
     "express": "^4.19.2"
   }
