@@ -7,6 +7,9 @@ import { ENVIRONMENT, PORT, HOST } from './config.js'
 
 const app = express()
 
+//converte o que vem do body para objeto
+app.use(express.json())
+
 app.get('/', (req, res) => {res.json({message: "Bem-vindo a API!"})})
 
 app.use('/user', userRouter)

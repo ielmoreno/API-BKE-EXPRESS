@@ -1,5 +1,4 @@
-import { getById } from "../../models/userModels"
-
+import {getById} from "../../models/userModels.js"
 const userById = async (req, res) => {
     const {id} = req.params
 
