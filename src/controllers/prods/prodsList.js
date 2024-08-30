@@ -1,9 +1,9 @@
-import prodModel from "../../models/prodModels.js"
+import { getAllUsers } from "../../models/prodModels.js"
 
 const prodsList = (req, res) => {
 
-    const prods = prodModel.getAll()
-    res.json(prods)
+    const users = getAllUsers()
+    res.json(users)
 }
 
 export default prodsList

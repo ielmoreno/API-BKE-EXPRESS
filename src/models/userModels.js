@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export const getAll = async () => {
+export const getAllUsers = async () => {
     const users = await prisma.user.findMany({
         select: {
             id: true,
@@ -13,7 +13,7 @@ export const getAll = async () => {
     return users
 }
 
-export const getById = async (id) =>{
+export const getUserById = async (id) =>{
     const user = prisma.user.findUnique({
         where: {
             id
@@ -27,7 +27,7 @@ export const getById = async (id) =>{
     return user
 }
 
-export const create = async (user) => {
+export const createUser = async (user) => {
     const result = await prisma.user.create({
         // data:{
         //     name: user.name,
@@ -44,7 +44,7 @@ export const create = async (user) => {
     return result
 }
 
-export const remove = async (id) =>{
+export const removeUser = async (id) =>{
     const user = prisma.user.delete({
         where: {
             id
@@ -58,7 +58,7 @@ export const remove = async (id) =>{
     return user
 }
 
-export const update = async (user) => {
+export const updateUser = async (user) => {
     const result = await prisma.user.update({
         where:{
             id: user.id

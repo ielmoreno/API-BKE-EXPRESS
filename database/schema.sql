@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `api_express`.`user` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3
 
-CREATE TABLE `product` (
+CREATE TABLE IF NOT EXISTS `api_express`.`product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
   `preco` decimal(10,0) NOT NULL,

@@ -8,12 +8,11 @@ import deleteProds from "../controllers/prods/deleteProds.js"
 
 const router = express.Router()
 
-
-router.get('/list', prodsList)
-router.get('/', prodsById)
 router.post('/', createProds)
-router.put('/', editProds)
-router.patch('/', editNameProds)
-router.delete('/', deleteProds)
+router.get('/list', prodsList)
+router.get('/:id', prodsById)
+router.put('/:id', editProds)
+router.patch('/:id', editNameProds)
+router.delete('/:id', deleteProds)
 
 export default router

@@ -1,8 +1,8 @@
-import { remove } from "../../models/userModels.js" 
+import { removeUser } from "../../models/userModels.js" 
 const deleteUser = async (req, res) => {
 
     const {id} = req.params
-    const user = await remove(+id)
+    const user = await removeUser(+id)
 
     if(!user){
         return res.status(404).json({
