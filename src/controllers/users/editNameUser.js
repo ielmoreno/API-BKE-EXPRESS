@@ -1,4 +1,4 @@
-import { updateUser } from "../../models/userModels.js"
+import { update } from "../../models/userModels.js"
 
 const editNameUser = async (req, res) => {
     const {id} = req.params
@@ -9,7 +9,7 @@ const editNameUser = async (req, res) => {
         name
     }
 
-    const result = await updateUser(user)
+    const result = await update(user)
 
     if(!result){
         return res.status(401).json({

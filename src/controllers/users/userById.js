@@ -1,8 +1,8 @@
-import { getUserById } from "../../models/userModels.js"
+import { getById } from "../../models/userModels.js"
 const userById = async (req, res) => {
     const {id} = req.params
 
-    const user = await getUserById(+id)
+    const user = await getById(+id)
     if(user)
         return res.json({
             message: "User get by id",

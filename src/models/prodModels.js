@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
-const getAllProds = async () => {
+export const getAllProds = async () => {
 
     const prods = await prisma.product.findMany({
         select: {
@@ -26,7 +26,7 @@ export const getProdById = async (id) =>{
     return prod
 }
 
-const createProd = async (prod) => {
+export const create = async (prod) => {
     const result = await prisma.product.create({
         data: prod,
         select: {
@@ -38,7 +38,7 @@ const createProd = async (prod) => {
     return result
 }
 
-export const removeProd = async (id) =>{
+export const remove = async (id) =>{
     const prod = await prisma.product.delete({
         where: {
             id
@@ -52,8 +52,8 @@ export const removeProd = async (id) =>{
     return prod
 }
 
-export const updateProd = async (prod) =>{
-    const prod = await prisma.product.update({
+export const update = async (prod) =>{
+    const prods = await prisma.product.update({
         where: {
             id: prod.id
         },
